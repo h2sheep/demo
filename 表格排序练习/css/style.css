@@ -1,0 +1,43 @@
+	* { 
+    margin: 0; 
+    padding: 0; 
+  }
+  
+	#tab { 
+    margin: 100px auto; 
+    text-align: center; 
+    list-style: none; 
+  }
+  
+	#tab thead { 
+    font-weight: 100; 
+    background-color: skyblue; 
+  }
+  
+	#tab thead th { 
+    width: 100px; 
+    padding-top: 5px; 
+    font-weight: 100; 
+  }
+  
+	#tab tbody tr { 
+    height: 20px; 
+    font-size: 14px; 
+    font-weight: 100; 
+  }
+  
+	#tab tbody tr td { 
+    padding: 5px; 
+  }
+  
+	#tab tbody tr:nth-child(odd) td{ 
+    background-color: #cfcfcf; 
+  }
+  
+	#tab tbody tr:nth-child(even) td{ 
+    background-color: #f1f1ee; 
+  }
+  
+	#tab tbody tr:hover td{ 
+    background-color: pink; 
+  }

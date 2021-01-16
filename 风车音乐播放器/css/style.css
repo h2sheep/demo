@@ -1,0 +1,51 @@
+body{
+  background:#d7faff;
+}
+#wrap{
+  width:320px;
+  height: 320px;
+  margin: 100px auto;
+  animation:fengche 3s linear infinite ;
+}
+#wrap div{
+  width:0px;
+  height: 0px;
+  float: left;
+}
+@keyframes fengche{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform:rotate(360deg);
+  }
+}
+
+.box1{
+  border-top:80px solid transparent;
+  border-right: 80px solid transparent;
+  border-left: 80px solid deepskyblue;
+  border-bottom: 80px solid deepskyblue;
+}
+.box2{
+  border-top:80px solid greenyellow;
+  border-right: 80px solid transparent;
+  border-left: 80px solid greenyellow;
+  border-bottom: 80px solid transparent;
+}
+.box4{
+  border-top:80px solid hotpink;
+  border-right: 80px solid hotpink;
+  border-left: 80px solid transparent;
+  border-bottom: 80px solid transparent;
+}
+.box3{
+  border-top:80px solid transparent;
+  border-right: 80px solid firebrick;
+  border-left: 80px solid transparent;
+  border-bottom: 80px solid firebrick;
+}
+.music{
+  width: 300px;
+  margin:50px auto;
+}

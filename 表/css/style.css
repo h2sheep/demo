@@ -1,0 +1,65 @@
+
+heml, body {
+	margin: 0;
+	padding: 0;
+	background-color: #f6f6f6;
+}
+.c,
+.wrap .hour,
+.wrap .min,
+.wrap .sec {
+  height: 50%;
+  margin: 0 auto;
+}
+.wrap {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin: 100px auto;
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+  border-radius: 50%;
+}
+.wrap > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.wrap .hour-wrap {
+  width: 60%;
+  height: 60%;
+  animation: rotate 43200s linear infinite;
+}
+.wrap .hour {
+  width: 4px;
+  background-color: #000;
+}
+.wrap .min-wrap {
+  width: 70%;
+  height: 70%;
+  animation: rotate 3600s steps(60) infinite;
+}
+.wrap .min {
+  width: 2px;
+  background-color: skyblue;
+}
+.wrap .sec-wrap {
+  width: 75%;
+  height: 75%;
+  animation: rotate 60s steps(60) infinite;
+}
+.wrap .sec {
+  width: 1px;
+  background-color: red;
+}
+@keyframes rotate {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}

@@ -1,0 +1,586 @@
+
+body{
+	padding: 0;
+	margin: 0;
+	font:16px 'Microsoft Yahei' normal;/* 设置页面字体样式 */
+	background:url(../images/bg.jpg) no-repeat top center;/* 设置页面背景 */
+}
+ul,span,img,h3,p,td,tr,button{/* 去除列表默认样式 */
+	list-style:none;/* 去除项目符号 */
+	padding:0;/* 去除默认外边距 */
+	margin:0;
+}
+a{/* 去除超链接默认样式 */
+	color: #000000;
+	text-decoration:none;
+}
+.w{/* 这里设置版心的统一样式 */
+	width:1200px;
+	margin:0px auto;
+}
+.clearfix:before,
+.clearfix:after{/* 解决高度塌陷问题 */
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* 开始设置导航栏样式 */
+/* logo样式 */
+nav .logo{
+	float:left;
+}
+/* 主导航栏样式 */
+.main-nav{
+}
+.main-nav ul,
+.sub-nav ul{
+	float:right;/* 列表向右浮动 */
+}
+.main-nav ul li{
+	float:left;/* 从左到右排列 */
+	width:130px;
+	height:55px;
+	padding-top:20px;
+	text-align:center;/* 文字水平居中 */
+}
+.main-nav ul li a span,
+.sub-nav ul li a span{
+	display:inline-block;/* 设置自适应宽度 */
+	transition:.3s;/* 添加一个过渡效果 */
+	color:#fff;
+}
+.main-nav ul li a p{/* 设置导航栏英文注释样式 */
+	padding-top:8px;
+	font: 100 12px arial;/* 设置字体样式 */
+	color:rgba(255,255,255,.5);/* 设置字体颜色样式 */
+}
+.main-nav ul li a:hover span{/* 设置超链接悬浮样式 */
+	transform:scale(1.1);
+}
+.main-nav ul li a:hover p{/* 设置注释悬浮样式 */
+	color:rgba(255,255,255,.8);
+}
+/* 副导航栏样式 */
+.sub-nav{
+	margin-top: 10px;
+	margin-bottom: 274px;
+}
+.sub-nav ul li{
+	width:130px;
+	padding-top:5px;
+	font:normal  14px/16px "微软雅黑";/* 设置副导航栏字体样式 */
+	text-align:center;
+}
+.sub-nav ul li a:hover span{/* 添加一个悬浮样式 */
+	transform:scale(1.1);
+	color: skyblue;/* 字体变红 */
+}
+.sub-nav ul li a span:before{/* 这里添加一个伪类 达成底下红线的效果 */
+	position:absolute;/* 开启绝对定位 */
+	bottom:1px;/* 位于距底部1px处 */
+	left:0px;
+	width:100%;/* 宽度与父元素一致 */
+	height:1px;
+	content:"";
+	transition:all .3s;/* 添加一个过渡效果 */
+	background-color:skyblue;/* 设置颜色为红色 */
+	transform:scaleX(0);/* 设置原本样式为不可见 */
+}
+.sub-nav ul li a:hover span:before{
+	transform:scaleX(1);/* 水平拉长为原来的长度*/
+}
+/* 导航栏设置样式结束 */
+
+/* 设置banner样式 */
+.banner a{
+	transition: .3s;/* 添加一个过渡 */
+}
+.banner a:hover{
+	color: rgba(0,0,0,.8);/* 悬浮颜色变黑 */
+}
+.banner .b-top{
+	height: 130px;
+	background: url(../images/b-top-bg.png) right center no-repeat;/* 添加背景图片 */
+}
+.b-top .download{
+	position: relative;/* 添加定位*/
+	/* top: -10px; */
+	float: left;
+	width: 272px;
+	height: 128px;
+	text-align: center;/* 水平居中 */
+	background: url(../images/download-bg.jpg) no-repeat bottom center;
+}
+.b-top .download a{/* 这里将整个div都设为超链接的区域 */
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.b-top .download span{
+	display: block;/* 转换为块元素 */
+	margin-top: 50px;
+	font-size: 24px;
+	color: #fff;
+}
+.b-top .download:hover/{/* 添加悬浮样式 */
+	background-size: 110% 110%;
+}
+.b-top .download span:before{/* 利用伪类添加图标 */
+	content: "";
+	display: inline-block;/* 行内块 */
+	width: 20px;
+	height: 20px;
+	background: url(../images/CF.sprite.png) no-repeat -25px -38px;
+}
+.b-top ul{
+	float: right;/* 向右浮动 */
+}
+.b-top ul li{
+	float: left;/* 从左到右排列 */
+	width:116px;
+	height: 88px;
+	padding-top:40px;
+	text-align: center;/* 水平居中 */
+}
+.b-top ul li a{
+	color: #fff;
+}
+.b-top ul li a p{
+	margin-top: 20px;
+}
+.b-top .b-icon{
+	position: relative;
+	left: 50%;
+	transform:translateX(-50%);/* 以上便于自适应居中 */
+	width: 20px;
+	height: 20px;/* 设置图标大小 */
+	background: url(../images/CF.sprite.png) no-repeat;
+}
+/* 设置b-contanin部分 */
+.b-contain{
+	position: relative;/* 开启定位便于子元素定位 */
+	float: left;
+	width:812px;
+	overflow: hidden;
+}
+.b-contain .b-imgs ul{
+	position:relative;
+}
+.b-contain .b-imgs ul li{
+	float: left;/* 向左浮动 */
+}
+.b-contain .change-button{
+	position: relative;
+}
+.b-contain .change-button ul{
+		position: absolute;
+		left: 50%;
+		bottom:0;
+		transform: translateX(-50%);
+		width: 100%;
+}
+.b-contain .change-button ul li{
+	float: left;/* 向左浮动 */
+	width: 116px;
+	height: 36px;
+	line-height: 36px;
+	font-size: 14px;
+	color: #FFFFFF;
+	text-align: center;/* 水平居中 */
+	background: rgba(0,0,0,.6);
+	cursor: pointer;/* 设置鼠标样式 */
+}
+.b-contain .change-button ul .white{
+	background: rgba(255,255,255,.6);
+}
+/* banner右边样式 */
+.b-right{
+	float: right;/* 向右浮动 */
+	width: 340px;
+	height: 382px;
+	padding: 10px 20px;/* 设置内边距 */
+	background:rgba(255,255,255,.9);/* 白色背景 */
+	overflow: hidden;/* 溢出隐藏 */
+}
+.b-right .header ul{
+	float: right;
+	border-bottom: 1px solid #999;
+}
+.b-right .header ul li{
+	float: left;/* 从左到右排列 */
+	width:75px;
+	height: 40px;
+	margin: 0px 5px;
+	line-height: 40px;/* 垂直居中 */
+	text-align: center;/* 水平居中 */
+}
+.b-right .header ul li:hover a{/* 鼠标悬浮字体变红 */
+	color: red;
+}
+.b-right .header ul li:after{/* 设置下划线样式 */
+	position: relative;
+	bottom: 0;
+	left: 0;/* 位于底部 */
+	content: "";
+	display: block;
+	height: 1px;
+	width: 100%;
+	background: red;
+	opacity: 0;/* 默认不显示 */
+}
+.b-right .header ul li:hover:after{
+	opacity: 1;/* 鼠标悬浮显示 */
+}
+.b-right .body{
+	height: 1344px;/* 包含div1-4 */
+}
+.b-right .body .div{
+	position: absolute;
+	display: none;/* 默认隐藏 */
+}
+.b-right .body .appear{
+	display: block;/* 显示*/
+}
+.b-right .body h3{
+	position:relative;
+	height: 60px;
+	text-align: center;/* 水平居中 */
+}
+.b-right .body h3 a{
+	font: bold 14px/60px "仿宋";
+	color: red;/* 设置字体样式 */
+}
+.b-right .body ul{
+	text-align: left;
+}
+.b-right .body ul li{
+	width: 100%;
+	border-bottom: 1px dashed #999;
+}
+.b-right .body ul li:after{/* 解决高度塌陷问题 */
+	content: "";
+	display: block;
+	clear: both;
+}
+.b-right .body ul li .div-left{
+	float: left;/* 向左浮动 */
+	display: block;
+	width: 300px;
+	height: 45px;
+	line-height: 45px;
+	font-size:14px;
+	overflow:hidden; /* 超出的文本隐藏 */
+	text-overflow:ellipsis; /* 溢出用省略号显示 */
+	white-space:nowrap; /* 溢出不换行 */
+}
+.b-right .body ul li a{
+	color: #999999;/* 设置超链接颜色 */
+}
+.b-right .body ul li a:hover{
+	color: #FF0000;
+}
+.b-right .body ul li .div-right{
+	float: right;/* 向右浮动 */
+	width:40px;
+	height: 45px;
+	line-height: 45px;/* 垂直居中 */
+	color: #999999;
+}
+.b-right .body div{
+	float: left;
+}
+
+/* container 开始设置样式 */
+.container{
+	
+}
+.container .title{
+	height: 36px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #999;
+}
+.container .more{
+	float: right;/* 向右浮动 */
+	font:normal 14px/36px "宋体";
+}
+.container .more a{
+	color:#999;/* 超链接颜色 */
+}
+.container .more a:hover{
+	color: red;
+}
+.container h3{
+	font: bold 24px/36px "微软雅黑";
+}
+.container h3:before{/* 添加图标 */
+	content:"";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	padding-right: 5px;
+	background: url(../images/CF.sprite.png) no-repeat;
+}
+
+.container .event,
+.container .alive{
+	width: 812px;
+}
+.container .enter{
+	float: right;/* 向右浮动 */
+	width:380px;
+}
+.event .title h3:before{
+	background-position: -74px -62px;/* 找到对应图标 */
+}
+.alive .title h3:before{
+	background-position: -2px -62px;/* 找到对应图标 */
+}
+.enter .title h3:before{
+	background-position: -170px -62px;/* 找到对应图标 */
+}
+.other .title h3:before{
+	background-position:-145px -62px;
+}
+.event .imgs ul,
+.alive .imgs ul,
+.other .imgs ul{
+	display: flex;
+	justify-content: space-between;/* h5新布局特性 均匀分布 */
+}
+.event .imgs ul li{
+	position: relative;/* 方便后面p定位 */
+	float: left;/* 左浮动 */
+	width: 200px;
+	height: 90px;
+	overflow: hidden;/* 放大溢出隐藏 */
+}
+.alive .imgs ul li{
+	position: relative;/* 方便后面p定位 */
+	overflow: hidden;
+}
+.other .imgs ul li{
+	width: 368px;
+	height: 120px;
+	background: pink;
+}
+.alive .imgs ul li:nth-child(1){/* 第一个li */
+	width: 284px;
+	height: 112px;
+}
+.other .imgs ul li:nth-child(3){
+	background: url(../images/other-3.jpg) no-repeat;
+	background-position: 10px 10px;
+	border: 1px solid black;
+}
+.other .imgs ul li a{
+	display: block;
+	height: 100%;
+}
+.alive .imgs ul li:nth-child(2),
+.alive .imgs ul li:nth-child(3),
+.alive .imgs ul li:nth-child(4){/* 后面三个li */
+	width: 170px;
+	height: 112px;
+}
+.event .imgs ul li img,
+.alive .imgs ul li img{
+	transition: .4s;/* 添加一个放大时间过渡 */
+}
+.alive .imgs ul li .width{
+	width: 170px;
+}
+.event .imgs ul li:hover img,
+.alive .imgs ul li:hover img{
+	transform: scale(1.05);/* 鼠标悬浮 放大1.05倍 */
+}
+.alive .imgs ul li a{
+	color: #fff;
+}
+.event .imgs ul li a p{
+	position: absolute;
+	left: 10px;
+	bottom:15px;/* 定位在图片中恰当位置 */
+	padding: 2px 2px;
+	font:400 12px/14px "宋体";
+	color: red;
+	border:1px solid red;/* 给个红色边框 */
+}
+.alive .imgs ul li a p{
+	position: absolute;
+	left:0;
+	bottom: 0;/* 位于底部中央 */
+	width:100%;
+	height:20px;
+	font:400 14px/20px "微软雅黑" ;
+	text-align: center;/* 水平居中 */
+	background: rgba(0,0,0,.6);/* 添加透明背景 */
+}
+.enter table{
+	margin: 0 auto;
+	border: 1px solid black;
+	border-collapse: collapse;/* 单线边框 */
+}
+.enter table tr{
+	
+}
+.enter table tr td{
+	width: 120px;
+	height: 75px;
+	text-align: center;/* 水平居中 */
+	border: 1px solid black;
+}
+.enter table tr td:hover span{
+	color: red;/* 鼠标悬浮变红 */
+}
+.enter table tr td a span:before{
+	content: "";
+	display: block;
+	width: 30px;
+	height: 30px;
+	margin: 0 auto;/* 居中 */
+	background: url(../images/CF.sprite.png) no-repeat;
+	transition: 1.5s;/* 添加一个旋转时间过渡 */
+}
+.enter table tr td:hover span:before{
+	transform: rotateY(360deg);/* 旋转一周 */
+}
+/* 这里统一设置td里的图标 */
+.enter table .e-01:before{
+	background-position: -112px -4px;
+}
+.enter table .e-02:before{
+	background-position: -40px -4px;
+}
+.enter table .e-03:before{
+	background-position: -72px -4px;
+}
+.enter table .e-04:before{
+	background-position: -2px -4px;
+}
+.enter table .e-05:before{
+	background-position: -145px -4px;
+}
+.enter table .e-06:before{
+	background-position: -180px -4px;
+}
+.enter table .e-07:before{
+	background-position: -218px -4px;
+}
+.enter table .e-08:before{
+	background-position: -254px -4px;
+}
+.enter table .e-09:before{
+	background-position: -291px -4px;
+}
+/* 表单搜索框 */
+.enter form{
+	position: relative;/* 方便btn定位 */
+	margin-top: 10px;
+	text-align: center;
+}
+.enter input{
+	height: 40px;
+}
+.enter .search{
+	width: 364px;
+	text-indent: 1em;/* 缩进 */
+}
+.enter .btn{
+	position: absolute;
+	right: 9px;
+	top: 0;
+	cursor: pointer;/* 设置指针样式 */
+}
+.container .notice p{
+	margin-top: 10px;
+	font-size: 12px;
+	color: #666;
+	text-align: center;/* 居中 */
+}
+/* footer */
+.footer{
+	height: 175px;
+	margin-top: 20px;
+	font-size: 12px;/* 设个小字号 */
+	color: #c7c7c7;/* 加个颜色 */
+	background:#000;
+}
+.f-content .f-left{
+	padding-top: 20px;
+}
+.f-content .f-right{
+	float: right;
+}
+.f-content .f-right a{
+	color: #c7c7c7;
+}
+.f-content .f-right ul{
+	padding:20px 0px 20px 0px;
+}
+.f-content .f-right ul li{
+	float: left;/* 左浮动 */
+	margin:0 5px;
+}
+.f-content .f-right ul li a:hover{
+	color: #f0f0f0;
+	text-decoration: underline;/* 悬浮样式 下划线 */
+}
+.f-content .f-right p{
+	margin:5px 0 5px 5px;
+}
+aside{
+	position:fixed;/* 固定 */
+	right: -160px;
+	top: 70px;/* 页面右边 */
+	width:270px;
+	height: 40px;
+}
+aside ul li{
+	cursor:default;/* 默认箭头 */
+	padding: 10px 0;
+}
+aside ul li .out{
+	display: inline-block;/* 行内块 */
+	width: 100px;
+	height: 40px;
+	font:normal 16px/40px "微软雅黑";/* 设置字体样式并垂直居中 */
+	text-align: center;/*水平居中 */
+	background: lightgrey;
+	opacity: .4;
+	border-radius: 25px 0 0 25px;/* 左边边框为圆弧 */
+}
+aside ul li .in{
+	display:inline-block;/* 行内块 */
+	height: 40px;
+	width: 160px;
+	font:normal 16px/40px "微软雅黑";/* 设置字体样式并垂直居中 */
+	text-align: left;
+	text-indent: 1em;/* 缩进 */
+	background: skyblue;
+	opacity: .2;
+	vertical-align:top;/* 对齐 */
+}
+aside ul li:hover{
+	margin-left: -160px;
+}
+aside ul li:hover span{
+	opacity: .5;/*半透明 */
+}
+/* 音频 */
+audio{
+	display: none;
+}
+.musicImg{
+	position: fixed;
+	top: 10px;
+	right: 20px;/* 定位到页面右边 */
+	width: 60px;
+	height: 60px;
+}
+.musicImg img{
+	width: 60px;
+	border-radius: 50%;
+	cursor: pointer;
+}
