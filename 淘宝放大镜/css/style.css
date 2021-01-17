@@ -1,0 +1,29 @@
+* { margin: 0; padding: 0; }
+.wrap {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 20px;
+}
+/* 设置初始尺寸 */
+.wrap img { width: 400px; height: 400px; }
+.wrap .mark {
+  display: none;	/* 默认隐藏 */
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(0, 0, 0, .4);
+}
+.hiddenwrap {
+  display: none;	/* 默认隐藏 */
+  overflow: hidden;	/* 溢出隐藏 */
+  position: absolute;
+  top: 0;
+  left: 450px;
+  width: 600px;
+  height: 600px;
+}
+/* 设置放大尺寸 */
+.hiddenwrap img { width: 1000px; height: 1000px; }

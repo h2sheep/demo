@@ -1,0 +1,28 @@
+ul { 
+  margin: 0; 
+  padding: 0;	
+  list-style: none; 
+}
+
+ul li { 
+  height: 900px; 
+  margin: 100px auto; 
+  text-align: center; 
+}
+
+ul li img { 
+  width: 200px; 
+  /* height: 200px; */
+}
+
+div {
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: deeppink;
+  text-align: center;
+  line-height: 40px;
+}
