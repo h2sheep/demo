@@ -1,0 +1,5 @@
+export const ADD_LIST_ITEM: string = 'ADD_LIST_ITEM'
+export const SET_TODO_LIST: string = 'SET_TODO_LIST'
+export const REMOVE_LIST_ITEM: string = 'REMOVE_LIST_ITEM'
+export const SET_ITEM_STATUS: string = 'SET_ITEM_STATUS'
+export const SET_DOING_STATUS: string = 'SET_DOING_STATUS'
